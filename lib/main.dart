@@ -10,8 +10,30 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        home: Scaffold(
-      appBar: AppBar(title: Text('first app',style: TextStyle(color: Colors.white),),backgroundColor: Colors.blue,),
-    ));
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('app bar title'),
+          backgroundColor: Colors.deepOrange,
+        ),
+        body: Center(
+          child: ElevatedButton(
+            onPressed: () {},
+            child: Text('click me'),
+          ),
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          items: [
+            BottomNavigationBarItem(
+              label: 'home',
+              icon: Icon(Icons.home),
+            ),
+            BottomNavigationBarItem(
+              label: 'settings',
+              icon: Icon(Icons.settings),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
